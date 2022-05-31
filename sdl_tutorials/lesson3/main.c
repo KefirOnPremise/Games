@@ -17,15 +17,28 @@ void close();
 int
 main(int argc, char* args[])
 {
+  bool quit_flag = false;
+  SDL_Event event;
+
   if (!init())
     return 1;
 
   if (!loadMedia())
     return 1;
 
-  SDL_BlitSurface(gamePicture, NULL, gameScreenSurface, NULL);
-  SDL_UpdateWindowSurface(gameWindow);
-  SDL_Delay(10 * SECOND);
+  while (!quit_flag)
+    {
+      while (SDL_PollEvent(&event) != 0)
+	{
+	  if (event.type == SDL_QUIT)
+	    {
+	      quit_flag = true;
+	    }
+	}
+
+     SDL_BlitSurface(gamePicture, NULL, gameScreenSurface, NULL);
+     SDL_UpdateWindowSurface(gameWindow); 
+    }
 
   close();
 
