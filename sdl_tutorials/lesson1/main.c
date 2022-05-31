@@ -6,7 +6,7 @@ const int SCREEN_HEIGHT = 480;
 const int SECOND        = 1000;
 
 int
-main (int argc, char* args[])
+main(int argc, char* args[])
 {
   SDL_Window*  window        = NULL;
   SDL_Surface* screenSurface = NULL;
