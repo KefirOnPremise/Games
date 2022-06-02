@@ -1,17 +1,20 @@
 #include <cstdio>
-#include "App.h"
+#include <ctime>
+#include <cstdlib>
+#include <SDL2/SDL.h>
+#include "Random.h"
+
+bool init();
+bool loadMedia();
 
 int
-main(int argv, char** args)
+main(int argc, char **argv)
 {
-    App app;
+  bool quit_flag = false;
+  SDL_Event e;
 
-    if (!app.init())
-	{
-	    printf("Cannot initialize\n");
-	}
+  // pseudo-random number generator
+  srand((unsigned)time(NULL));
 
-    // app.run()
-
-    return 0;
+  return 0;
 }
