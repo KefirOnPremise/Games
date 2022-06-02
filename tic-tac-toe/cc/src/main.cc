@@ -16,5 +16,18 @@ main(int argc, char **argv)
   // pseudo-random number generator
   srand((unsigned)time(NULL));
 
+  // if (!init())
+  //   return 1;
+
+  // if (!loadMedia())
+  //   return 1;
+
+  while(!quit_flag)
+    {
+      printf("haha\n");
+    }
+
+  // close();
+
   return 0;
 }
