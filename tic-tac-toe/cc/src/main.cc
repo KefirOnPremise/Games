@@ -2,10 +2,16 @@
 #include <ctime>
 #include <cstdlib>
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
+#include "main.h"
 #include "Random.h"
+
+
 
 bool init();
 bool loadMedia();
+void close();
 
 int
 main(int argc, char **argv)
